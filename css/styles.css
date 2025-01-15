@@ -1,5 +1,5 @@
 /* =================================================================== 
- * Luther Main Stylesheet
+ * Fahri Main Stylesheet
  * Template Ver. 1.0.0
  * 02-15-2021
  * ------------------------------------------------------------------
@@ -1313,7 +1313,7 @@ h1, .h1 {
 }
 
 h2, .h2, h3, .h3, h4, .h4 {
-    margin-top    : var(--vspace-2);
+    margin-top    : auto;
     margin-bottom : var(--vspace-0_5);
 }
 
@@ -2933,7 +2933,7 @@ img.u-pull-left {
 }
 
 .header-mobile {
-    z-index          : 101;
+    z-index          : 100;
     display          : none;
     height           : var(--header-height);
     background-color : var(--color-body);
@@ -3084,6 +3084,25 @@ img.u-pull-left {
  * responsive:
  * site-header
  * ------------------------------------------------------------------- */
+
+.header-mobile {
+    display: none;
+}
+
+.main-nav-wrap {
+    z-index: 90;
+}
+
+@media screen and (max-width: 768px) {
+    .header-mobile {
+        display: block;
+    }
+    
+    .main-nav-wrap {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .main-nav-wrap {
         width : 100%;
@@ -3105,6 +3124,7 @@ img.u-pull-left {
         background-color : var(--color-body);
         border-bottom    : 1px solid var(--color-border);
         box-shadow       : var(--box-shadow);
+        display: none;
     }
 
     .main-nav {
@@ -3593,6 +3613,7 @@ img.u-pull-left {
     margin-top : 0;
 }
 
+
 /* --------------------------------------------------------------------
  * ## works portfolio
  * -------------------------------------------------------------------- */
@@ -3846,6 +3867,18 @@ img.u-pull-left {
     color            : white;
 }
 
+/* --------------------------------------------------------------------
+ * ## certif portfolio
+ * -------------------------------------------------------------------- */
+
+.s-certificates {
+    padding-top    : var(--vspace-5);
+    padding-bottom : var(--vspace-3_5);
+}
+
+.s-certificates .h1 {
+    margin-top : 0;
+}
 /* ------------------------------------------------------------------- 
  * ## testimonials
  * ------------------------------------------------------------------- */
@@ -3969,6 +4002,7 @@ img.u-pull-left {
         padding-bottom : var(--vspace-3);
     }
 }
+
 
 @media screen and (max-width: 600px) {
     .folio-list__item-title {
