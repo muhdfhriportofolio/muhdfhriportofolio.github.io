@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html class="no-js ss-preload" lang="en">
+
 <head>
 
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Resume - Fahri</title>
+    <title>Portfolio - Muhammad Fahri</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -59,14 +60,14 @@
                 <span class="mobile-home-link"><a href="index.html">Fahri.</a></span>
                 <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
             </div>
-            
+
             <div class="main-nav-wrap d-none d-md-block">
                 <nav class="column lg-12 main-nav">
                     <ul>
                         <li><a href="index.html" class="home-link">Fahri.</a></li>
                         <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
                         <li><a href="#about" class="smoothscroll">About</a></li>
-                        <li><a href="#works" class="smoothscroll">Portfolio</a></li>
+                        <li><a href="#works" class="smoothscroll">Recent Projects</a></li>
                         <li><a href="#certif" class="smoothscroll">Certificates</a></li>
                         <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
                     </ul>
@@ -95,7 +96,7 @@
                         <h1 class="text-huge-title">
                             I am Fahri, <br>
                             a web developer <br>
-                            & experienced<br> 
+                            & experienced<br>
                             Ms. Office based<br>
                             in Medan
                         </h1>
@@ -111,7 +112,11 @@
                 </div> <!-- end intro content -->
 
                 <a href="#about" class="intro-scrolldown smoothscroll">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        fill-rule="evenodd" clip-rule="evenodd">
+                        <path
+                            d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
+                    </svg>
                 </a>
 
             </section> <!-- end s-intro -->
@@ -125,24 +130,27 @@
                 <div class="row about-info wide" data-animate-block>
 
                     <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="images/about-photo2.png" 
-                             srcset="images/about-photo2.png 1x, images/about-photo2.png 2x" alt="" class="about-info__pic" data-animate-el>
+                        <img src="images/about-photo2.png"
+                            srcset="images/about-photo2.png 1x, images/about-photo2.png 2x" alt=""
+                            class="about-info__pic" data-animate-el>
                     </div>
 
                     <div class="column lg-6 md-12">
-                        <div class="about-info__text" >
+                        <div class="about-info__text">
 
                             <h2 class="text-pretitle with-line" data-animate-el>
                                 About
                             </h2>
                             <p class="attention-getter" data-animate-el>
-                                A fourth-year student majoring in Informatics Engineering from Universitas Potensi Utama, 
-                                has a deep interest in the field of technology. 
-                                Experienced in creating websites and project designs and able to operate 
-                                Microsoft Word, PowerPoint and Excel. Thorough, adaptable,  
-                                and quick to learn. 
+                                A fourth-year student majoring in Informatics Engineering from Universitas Potensi
+                                Utama,
+                                has a deep interest in the field of technology.
+                                Experienced in creating websites and project designs and able to operate
+                                Microsoft Word, PowerPoint and Excel. Thorough, adaptable,
+                                and quick to learn.
                             </p>
-                            <a href="https://drive.google.com/file/d/1Tvp0AlM5xwj6657liILP-4b1QYLjJ68v/view?usp=sharing" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
+                            <a href="https://drive.google.com/file/d/1Tvp0AlM5xwj6657liILP-4b1QYLjJ68v/view?usp=sharing"
+                                class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
 
                         </div>
                     </div>
@@ -175,55 +183,202 @@
                         </h2>
 
                         <h2 class="text-pretitle" data-animate-el>
-                            Event Organizer
+                            Internship Experience
                         </h2>
+                        <style>
+                            .timeline__title,
+                            .timeline__meta {
+                                color: white;
+                                /* Warna awal putih */
+                                cursor: pointer;
+                                transition: color 0.3s ease;
+                            }
+
+                            .timeline__title:hover,
+                            .timeline__meta:hover {
+                                color: #EABE7B;
+                                /* Warna berubah saat hover */
+                            }
+
+                            .timeline__img {
+                                width: 100%;
+                                height: 150px;
+                                /* Sesuaikan tinggi gambar */
+                                object-fit: cover;
+                                /* Pastikan gambar tetap proporsional tanpa distorsi */
+                                border-radius: 6px;
+                                cursor: pointer;
+                            }
+
+                            /* Grid Layout untuk gambar */
+                            .timeline__images {
+                                display: none;
+                                /* Awalnya tersembunyi */
+                                gap: 8px;
+                                margin-top: 10px;
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                /* 3 kolom */
+                                gap: 10px;
+                            }
+
+                            
+                            /* Lightbox Overlay */
+                            .lightbox {
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100vw;
+                                height: 100vh;
+                                background: rgba(0, 0, 0, 0.8);
+                                display: none;
+                                align-items: center;
+                                justify-content: center;
+                                z-index: 9999;
+                            }
+
+                            .lightbox img {
+                                max-width: 90vw;
+                                max-height: 90vh;
+                                border-radius: 10px;
+                            }
+
+                            .lightbox .close {
+                                position: absolute;
+                                top: 20px;
+                                right: 30px;
+                                font-size: 30px;
+                                color: white;
+                                cursor: pointer;
+                                background: rgba(255, 255, 255, 0.2);
+                                padding: 5px 12px;
+                                border-radius: 50%;
+                            }
+
+                            .timeline__desc {
+    margin-bottom: 80px; /* Atur sesuai kebutuhan */
+}
+
+
+                            /* Responsif: Jika layar kecil, ubah jadi 2 atau 1 kolom */
+                            @media (max-width: 768px) {
+                                .timeline__images {
+                                    grid-template-columns: repeat(2, 1fr);
+                                    /* 2 kolom di layar sedang */
+                                }
+                            }
+
+                            @media (max-width: 500px) {
+                                .timeline__images {
+                                    grid-template-columns: repeat(1, 1fr);
+                                    /* 1 kolom di layar kecil */
+                                }
+                            }
+                        </style>
 
                         <div class="timeline" data-animate-el>
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Bakrie Center Foundation x Yayasan Mentari Meraki Asa
+                                    </h4>
+                                    <h5 class="timeline__meta">Web Development</h5>
+                                    <p class="timeline__timeframe">Feb 2024 - Jan 2025</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>As an intern who graduated from the Independent Campus program and took up the IT
+                                        & Database division at
+                                        the Bakrie Center Foundation, with a placement position at the Mentari Meraki
+                                        Asa Foundation</p>
+                                </div>
+                                <div class="timeline__images">
+                                    <img src="/images/dokumentasi/dok4.JPG" alt="Dokumentasi 1" class="timeline__img">
+                                    <img src="/images/dokumentasi/dok2.jpg" alt="Dokumentasi 2" class="timeline__img">
+                                    <img src="/images/dokumentasi/dok3.jpg" alt="Dokumentasi 3" class="timeline__img">
+                                </div>
+                            </div>
 
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">HTBS Event (World Tuberculosis Day)</h3>
-                                    <h5 class="timeline__meta">Coordinator – P2TK </h5>
-                                    <p class="timeline__timeframe">Apr 2024</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>As coordinator of supplies, equipment, transportation and security for the "World Tuberculosis Day" campaign launched by the Mentari 
-                                        Meraki Asa Foundation and the Bakrie Center Foundation to support the elimination of tuberculosis in accordance with the SDGs.</p>
-                                </div>
-                            </div>
-    
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">FunWalk Event</h4>
-                                    <h5 class="timeline__meta">Chairperson </h5>
-                                    <p class="timeline__timeframe">Oct 2024</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>As Chairperson of the YMMA 2024 Fun Walk Committee organized by Yayasan Mentari Meraki Asa to support the elimination of 
-                                        tuberculosis in accordance with the SDGs goals.</p>
-                                </div>
-                            </div>
-    
                             <h2 class="text-pretitle" data-animate-el>
-                                Internship Experience
+                                Event Organizer
                             </h2>
 
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Bakrie Center Foundation x Yayasan Mentari Meraki Asa</h4>
-                                    <h5 class="timeline__meta">Web Development </h5>
-                                    <p class="timeline__timeframe">Feb 2024 - Dec 2024</p>
+                                    <h4 class="timeline__title">HTBS Event (World Tuberculosis Day)</h4>
+                                    <h5 class="timeline__meta">Coordinator – P2TK</h5>
+                                    <p class="timeline__timeframe">Apr 2024</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>As an intern who graduated from the Independent Campus program and took up the IT & Database division at the Bakrie Center 
-                                        Foundation, with a placement position at the Mentari Meraki Asa Foundation</p>
+                                    <p>As coordinator of supplies, equipment, transportation and security for the "World
+                                        Tuberculosis Day"
+                                        campaign launched by the Mentari Meraki Asa Foundation and the Bakrie Center
+                                        Foundation to support the
+                                        elimination of tuberculosis in accordance with the SDGs.</p>
+                                    <div class="timeline__images">
+                                        <img src="/images/dokumentasi/htbs1.JPG" alt="Dokumentasi 1"
+                                            class="timeline__img">
+                                        <img src="/images/dokumentasi/htbs2.JPG" alt="Dokumentasi 2"
+                                            class="timeline__img">
+                                        <img src="/images/dokumentasi/htbs3.JPG" alt="Dokumentasi 3"
+                                            class="timeline__img">
+                                    </div>
                                 </div>
                             </div>
 
-                        </div> <!-- end timeline -->
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">FunWalk Event</h4>
+                                    <h5 class="timeline__meta">Chairperson</h5>
+                                    <p class="timeline__timeframe">Oct 2024</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>As Chairperson of the YMMA 2024 Fun Walk Committee organized by Yayasan Mentari
+                                        Meraki Asa to support the
+                                        elimination of tuberculosis in accordance with the SDGs goals.</p>
+
+                                    <div class="timeline__images">
+                                        <img src="/images/dokumentasi/fun1.jpg" alt="Dokumentasi 1"
+                                            class="timeline__img">
+                                        <img src="/images/dokumentasi/fun2.jpg" alt="Dokumentasi 2"
+                                            class="timeline__img">
+                                        <img src="/images/dokumentasi/fun3.jpg" alt="Dokumentasi 3"
+                                            class="timeline__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lightbox (Hanya satu, di luar timeline__block) -->
+                        <div class="lightbox" id="lightbox">
+                            <span class="close" onclick="closeLightbox()">❌</span>
+                            <img id="lightboxImg" src="" alt="Preview">
+                        </div>
+
+                        <script>
+                            // Tampilkan gambar saat judul atau subjudul diklik
+                            document.querySelectorAll('.timeline__title, .timeline__meta').forEach(item => {
+                                item.addEventListener('click', () => {
+                                    const imgContainer = item.closest('.timeline__block').querySelector(
+                                        '.timeline__images');
+                                    imgContainer.style.display = imgContainer.style.display ===
+                                        'none' || imgContainer.style.display === '' ? 'grid' : 'none';
+                                });
+                            });
+
+                            // Lightbox Function
+                            document.querySelectorAll('.timeline__img').forEach(img => {
+                                img.addEventListener('click', () => {
+                                    document.getElementById('lightboxImg').src = img.src;
+                                    document.getElementById('lightbox').style.display = 'flex';
+                                });
+                            });
+
+                            function closeLightbox() {
+                                document.getElementById('lightbox').style.display = 'none';
+                            }
+                        </script>
 
                     </div> <!-- end column -->
 
@@ -239,14 +394,16 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">University Potensi Utama</h3>
-                                    <h5 class="timeline__meta">Bachelor Degree in Degree in Informatics</h5>
-                                    <p class="timeline__timeframe">Sep 2025 (Expected)</p>
+                                        <h5 class="timeline__meta">Bachelor Degree in Degree in Informatics</h5>
+                                        <p class="timeline__timeframe">Sep 2025 (Expected)</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Successfully achieved certified internship opportunities twice through the Kampus Merdeka program in IT Development positions, and obtained a GPA of 3.89 until semester 7.                                    </p>
+                                    <p>Successfully achieved certified internship opportunities twice through the Kampus
+                                        Merdeka program in IT Development positions, and obtained a GPA of 3.89 until
+                                        semester 8. </p>
                                 </div>
                             </div>
-    
+
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
@@ -255,22 +412,329 @@
                                     <p class="timeline__timeframe">Mei 2021</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Achieved an award as one of the top 20 students who qualified for the invitation track of the public university admission selection, out of a total of 300 students.</p>
+                                    <p>Achieved an award as one of the top 20 students who qualified for the invitation
+                                        track of the public university admission selection, out of a total of 300
+                                        students.</p>
                                 </div>
                             </div>
-    
                         </div> <!-- end timeline -->
-                        
                     </div> <!-- end column -->
 
+                    <style>
+                        .container {
+                            width: 100%;
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            padding: 2rem;
+                            text-align: center;
+                        }
+
+                        .title-section {
+                            text-align: center;
+                            /* Mengubah teks menjadi rata kiri */
+                            margin-bottom: 3rem;
+                            font-family: "Public Sans", sans-serif;
+                        }
+
+                        .title {
+                            font-size: 3.5rem;
+                            font-weight: 800;
+                            background: #FFF;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            margin-bottom: 1rem;
+                        }
+
+                        .subtitle {
+                            color: #94a3b8;
+                            font-size: 1.1rem;
+                        }
+
+                        .tab-buttons {
+                            display: flex;
+                            justify-content: center;
+                            /* Mengubah tombol tab menjadi rata kiri */
+                            gap: 1rem;
+                            margin-bottom: 3rem;
+                        }
+
+                        .tab-button {
+                            border-radius: 12px;
+                            font-weight: 600;
+                            font-size: 1.1rem;
+                            transition: all 0.4s ease;
+                            border: none;
+                            cursor: pointer;
+                            background: rgba(255, 255, 255, 0.05);
+                            color: #94a3b8;
+                            backdrop-filter: blur(10px);
+                            border: 2px solid rgba(255, 255, 255, 0.2);
+                            /* Ukuran border lebih tipis, seragam untuk keduanya */
+                            display: inline-flex;
+                        }
+
+                        .tab-button:hover {
+                            background: rgba(255, 255, 255, 0.1);
+                            transform: translateY(-2px);
+                        }
+
+                        .tab-button.active {
+                            background: linear-gradient(135deg, #4f4e4d 0%, #636160 100%);
+                            color: white;
+                            box-shadow: 0 3px 10px #EABE7B;
+                        }
+
+                        .skills-grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                            gap: 1.5rem;
+                            opacity: 0;
+                            transform: translateY(20px);
+                            transition: all 0.5s ease;
+                            justify-content: flex-start;
+                            /* Mengatur grid menjadi rata kiri */
+                        }
+
+                        .skills-grid.visible {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+
+                        .skill-card {
+                            position: relative;
+                            background: rgba(255, 255, 255, 0.05);
+                            backdrop-filter: blur(10px);
+                            border: 1px solid rgba(255, 255, 255, 0.05);
+                            border-radius: 13px;
+                            padding: 0.5rem 0.5rem;
+                            /* Mengurangi padding atas dan bawah */
+                            display: flex;
+                            flex-direction: row;
+                            gap: 2rem;
+                            transition: all 0.4s ease;
+                            opacity: 0;
+                            transform: scale(0.95);
+                            overflow: hidden;
+                        }
+
+
+                        .skill-card.visible {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+
+                        .skill-card:hover {
+                            transform: translateY(-10px);
+                            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+                            background: rgba(255, 255, 255, 0.1);
+                        }
+
+                        .skill-icon {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 16px;
+                            transition: all 0.4s ease;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 1rem;
+                        }
+
+                        .skill-icon img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            transition: all 0.4s ease;
+                        }
+
+                        .skill-card:hover .skill-icon {
+                            transform: scale(1.1) rotate(5deg);
+                        }
+
+                        .skill-name {
+                            font-size: 2rem;
+                            font-weight: 600;
+                            color: white;
+                            transition: all 0.3s;
+                            display: flex;
+                            justify-content: center;
+                            /* Menyelaraskan teks secara horizontal */
+                            align-items: center;
+                            /* Menyelaraskan teks secara vertikal */
+                            text-align: center;
+                            /* Memastikan teks rata tengah jika lebih dari satu baris */
+                            margin-left: 0;
+                            /* Menghapus margin kiri untuk penataan lebih rapi */
+                            margin-top: 1rem;
+                            /* Memberi jarak atas untuk tampilan lebih rapi */
+                        }
+
+                        .skill-card:hover .skill-name {
+                            transform: scale(1.05);
+                        }
+
+                        .skill-bg {
+                            position: absolute;
+                            inset: 0;
+                            border-radius: 16px;
+                            opacity: 0;
+                            transition: opacity 0.4s;
+                            background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.2), transparent);
+                        }
+
+                        .skill-card:hover .skill-bg {
+                            opacity: 1;
+                        }
+
+                        .hidden {
+                            display: none;
+                        }
+
+                        @media (max-width: 768px) {
+                            .container {
+                                padding: 1rem;
+                            }
+
+                            .title {
+                                font-size: 3rem;
+                            }
+
+                            .skills-grid {
+                                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                                gap: 1rem;
+                            }
+                        }
+                    </style>
+
+                    <div class="container" data-animate-block>
+                        <div class="title-section" data-animate-el>
+                            <h2 class="title"><i class="fas fa-code"></i> Skills & Tools</h2>
+                            <p class="subtitle">Discover my technical proficiency and tools I work with</p>
+                        </div>
+
+                        <div class="tab-buttons" data-animate-el>
+                            <button class="tab-button active" data-tab="stack">Tech Stack</button>
+                            <button class="tab-button" data-tab="tools">Tools Used</button>
+                        </div>
+
+                        <div id="tech-stack" class="skills-grid visible" data-animate-el></div>
+                        <div id="tools" class="skills-grid hidden" data-animate-el></div>
+                    </div>
+
+
+                    <script>
+                        const techStack = [{
+                                image: "/images/html.png",
+                                name: 'HTML',
+                            },
+                            {
+                                image: "/images/css-3.svg",
+                                name: 'CSS',
+                            },
+                            {
+                                image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+                                name: 'JavaScript',
+                            },
+                            {
+                                image: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+                                name: 'Java',
+                            },
+                            {
+                                image: "/images/php.png",
+                                name: 'PHP',
+                            },
+                            {
+                                image: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+                                name: 'Bootstrap',
+                            },
+                            {
+                                image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+                                name: 'Python',
+                            },
+                            {
+                                image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg",
+                                name: 'Laravel',
+                            }
+                        ];
+
+                        const tools = [{
+                                image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
+                                name: 'VS Code',
+                            },
+                            {
+                                image: "/images/msoffice.png",
+                                name: 'MS Office',
+                            },
+                            {
+                                image: "/images/xampp.svg",
+                                name: 'XAMPP',
+                            },
+                            {
+                                image: "/images/figma.png",
+                                name: 'Figma',
+                            }
+                        ];
+
+                        function createSkillCard(skill) {
+                            return `
+        <div class="skill-card">
+            <div class="skill-icon" style="background: ${skill.color}20">
+                <img src="${skill.image}" alt="${skill.name}" />
+            </div>
+            <span class="skill-name">${skill.name}</span>
+            <div class="skill-bg"></div>
+        </div>
+    `;
+                        }
+
+                        function renderSkills(type) {
+                            const skills = type === 'stack' ? techStack : tools;
+                            const container = document.getElementById(`${type === 'stack' ? 'tech-stack' : 'tools'}`);
+                            container.innerHTML = skills.map(skill => createSkillCard(skill)).join('');
+
+                            setTimeout(() => {
+                                const cards = container.querySelectorAll('.skill-card');
+                                cards.forEach((card, index) => {
+                                    setTimeout(() => {
+                                        card.classList.add('visible');
+                                    }, index * 100);
+                                });
+                            }, 50);
+                        }
+
+                        // Initial render
+                        renderSkills('stack');
+
+                        // Tab switching
+                        const tabButtons = document.querySelectorAll('.tab-button');
+                        const skillGrids = document.querySelectorAll('.skills-grid');
+
+                        tabButtons.forEach(button => {
+                            button.addEventListener('click', () => {
+                                const tabType = button.getAttribute('data-tab');
+
+                                tabButtons.forEach(btn => btn.classList.remove('active'));
+                                button.classList.add('active');
+
+                                skillGrids.forEach(grid => {
+                                    if (grid.id ===
+                                        `${tabType === 'stack' ? 'tech-stack' : 'tools'}`) {
+                                        grid.classList.remove('hidden');
+                                        setTimeout(() => grid.classList.add('visible'), 50);
+                                        renderSkills(tabType);
+                                    } else {
+                                        grid.classList.remove('visible');
+                                        grid.classList.add('hidden');
+                                    }
+                                });
+                            });
+                        });
+                    </script>
 
                 </div> <!-- end about-timelines -->
 
             </section> <!-- end s-about -->
 
-
-            <!-- ### works
-            ================================================== -->
+            <!-- ### works ================================================== -->
             <section id="works" class="s-works target-section">
 
                 <div class="row works-portfolio">
@@ -278,19 +742,19 @@
                     <div class="column lg-12" data-animate-block>
 
                         <h2 class="text-pretitle" data-animate-el>
-                            Portfolio
+                            Recent Projects
                         </h2>
                         <p class="h1" data-animate-el>
                             Here are some of my favorite projects I have done lately. Feel free to check them out.
                         </p>
-    
+
                         <ul class="folio-list row block-lg-one-half block-stack-on-1000">
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-01">
                                     <div class="folio-list__item-pic">
                                         <img src="images/portfolio/Ymma.png"
-                                            srcset="images/portfolio/Ymma.png 1x, images/portfolio/ymma2.png 2x"  alt="">
+                                            srcset="images/portfolio/Ymma.png 1x, images/portfolio/ymma2.png 2x" alt="">
                                     </div>
                                     Official Website
                                     <div class="folio-list__item-text">
@@ -303,15 +767,22 @@
                                     </div>
                                 </a>
                                 <a class="folio-list__proj-link" href="https://www.merakiasa.com/" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                    </svg>
                                 </a>
-                            </li> <!--end folio-list__item -->
+                            </li>
+                            <!--end folio-list__item -->
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-02">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/skrining.png" 
-                                            srcset="images/portfolio/skrining.png 1x, images/portfolio/skrining.png 2x" alt="">
+                                        <img src="images/portfolio/skrining.png"
+                                            srcset="images/portfolio/skrining.png 1x, images/portfolio/skrining.png 2x"
+                                            alt="">
                                     </div>
                                     Web-Based Tuberculosis Screening Platform
                                     <div class="folio-list__item-text">
@@ -323,16 +794,24 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="https://skrining.merakiasa.com/" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                <a class="folio-list__proj-link" href="https://skrining.merakiasa.com/"
+                                    title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                    </svg>
                                 </a>
-                            </li> <!--end folio-list__item -->
+                            </li>
+                            <!--end folio-list__item -->
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-03">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/fisip.png" 
-                                         srcset="images/portfolio/fisip.png 1x, images/portfolio/fisip.png 2x" alt="">
+                                        <img src="images/portfolio/fisip.png"
+                                            srcset="images/portfolio/fisip.png 1x, images/portfolio/fisip.png 2x"
+                                            alt="">
                                     </div>
                                     Web Profile
                                     <div class="folio-list__item-text">
@@ -344,16 +823,24 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="https://museumvirtualfisip.github.io/" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                <a class="folio-list__proj-link" href="https://museumvirtualfisip.github.io/"
+                                    title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                    </svg>
                                 </a>
-                            </li> <!--end folio-list__item -->
+                            </li>
+                            <!--end folio-list__item -->
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-04">
                                     <div class="folio-list__item-pic">
                                         <img src="images/portfolio/potensi.png"
-                                             srcset="images/portfolio/potensi.png 1x, images/portfolio/potensi.png 2x" alt="">
+                                            srcset="images/portfolio/potensi.png 1x, images/portfolio/potensi.png 2x"
+                                            alt="">
                                     </div>
                                     Web Profile
                                     <div class="folio-list__item-text">
@@ -365,10 +852,45 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="https://muhdfhri.github.io/Fakultas-Psikologi/" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                <a class="folio-list__proj-link" href="https://muhdfhri.github.io/Fakultas-Psikologi/"
+                                    title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                    </svg>
                                 </a>
-                            </li> <!--end folio-list__item -->
+                            </li>
+                            <!--end folio-list__item -->
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-05">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/woka.png"
+                                            srcset="images/portfolio/woka.png 1x, images/portfolio/woka.png 2x" alt="">
+                                    </div>
+                                    Web Profile
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Brand
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            WOKA – Professional Task Jockey, Web, & Design Services
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://workasistant.github.io/"
+                                    title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <!--end folio-list__item -->
 
                         </ul> <!-- end folio-list -->
 
@@ -379,16 +901,17 @@
                     <div id="modal-01" hidden>
                         <div class="modal-popup">
                             <img src="images/portfolio/gallery/g-ymma.png" alt="">
-                
+
                             <div class="modal-popup__desc">
                                 <h5>Official Profile</h5>
-                                <p>Create an official website for the Mentari Meraki Asa Foundation which contains complete information about the foundation.</p>
+                                <p>Create an official website for the Mentari Meraki Asa Foundation which contains
+                                    complete information about the foundation.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Branding</li>
                                     <li>Web Developer</li>
                                 </ul>
                             </div>
-                
+
                             <a href="https://www.merakiasa.com/" class="modal-popup__details">Project link</a>
                         </div>
                     </div> <!-- end modal -->
@@ -396,16 +919,17 @@
                     <div id="modal-02" hidden>
                         <div class="modal-popup">
                             <img src="images/portfolio/gallery/g-skrining.png" alt="">
-                
+
                             <div class="modal-popup__desc">
                                 <h5>Skrining Meraki Asa</h5>
-                                <p>Create a TB screening website to collect and analyze patient data online, to speed up referrals and treatment, as well as simplify symptom 
+                                <p>Create a TB screening website to collect and analyze patient data online, to speed up
+                                    referrals and treatment, as well as simplify symptom
                                     collection and detection in the community.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Web Developer</li>
                                 </ul>
                             </div>
-                
+
                             <a href="https://skrining.merakiasa.com/" class="modal-popup__details">Project link</a>
                         </div>
                     </div> <!-- end modal -->
@@ -413,24 +937,26 @@
                     <div id="modal-03" hidden>
                         <div class="modal-popup">
                             <img src="images/portfolio/gallery/g-fisip.png" alt="">
-                
+
                             <div class="modal-popup__desc">
                                 <h5>Museum Virtual Fisip - (USU)</h5>
-                                <p>Creating a virtual museum website for the faculty of social and political sciences, university of north sumatra to help with USU student’s 
+                                <p>Creating a virtual museum website for the faculty of social and political sciences,
+                                    university of north sumatra to help with USU student’s
                                     final semester assignments.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Front End Web</li>
                                 </ul>
                             </div>
-                
-                            <a href="https://museumvirtualfisip.github.io/" class="modal-popup__details">Project link</a>
+
+                            <a href="https://museumvirtualfisip.github.io/" class="modal-popup__details">Project
+                                link</a>
                         </div>
                     </div> <!-- end modal -->
 
                     <div id="modal-04" hidden>
                         <div class="modal-popup">
                             <img src="images/portfolio/gallery/g-potensi.png" alt="">
-                
+
                             <div class="modal-popup__desc">
                                 <h5>Psychology Faculty Website</h5>
                                 <p>Course Assignment </p>
@@ -438,49 +964,73 @@
                                     <li>Website</li>
                                 </ul>
                             </div>
-                
-                            <a href="https://muhdfhri.github.io/Fakultas-Psikologi/" class="modal-popup__details">Project link</a>
+
+                            <a href="https://muhdfhri.github.io/Fakultas-Psikologi/"
+                                class="modal-popup__details">Project
+                                link</a>
+                        </div>
+                    </div> <!-- end modal -->
+
+                    <div id="modal-05" hidden>
+                        <div class="modal-popup">
+                            <img src="images/portfolio/gallery/g-woka.png" alt="">
+
+                            <div class="modal-popup__desc">
+                                <h5>WOKA – Professional Task Jockey, Web, & Design Services</h5>
+                                <p>WorkAssistant is a platform that I developed as a founder, with the aim of helping
+                                    users in completing various needs such as coursework, website creation, design, and
+                                    IoT tool development. The site is designed to provide a complete solution for
+                                    students, professionals, and tech enthusiasts who need help with creative and
+                                    technical projects.</p>
+                                <ul class="modal-popup__cat">
+                                    <li>Website</li>
+                                </ul>
+                            </div>
+
+                            <a href="https://workasistant.github.io/" class="modal-popup__details">Project link</a>
                         </div>
                     </div> <!-- end modal -->
 
                 </div> <!-- end works-portfolio -->
 
-                            </div> <!-- end swiper-wrapper -->
-        
-                            <div class="swiper-pagination"></div>
-        
-                        </div> <!-- end swiper-container -->
-        
-                    </div> <!-- end column -->
-                </div> <!-- end row testimonials -->
+    </div> <!-- end swiper-wrapper -->
 
-            </section> <!-- end s-works -->
+    <div class="swiper-pagination"></div>
 
-            <!-- ### certificates================================================== -->
-                            <section id="certif" class="s-certificates target-section">
+    </div> <!-- end swiper-container -->
 
-                                <div class="row certif-portfolio">
-                        <div class="column lg-12" data-animate-block>
-                
-                            <h2 class="text-pretitle" data-animate-el>
-                                Certificates
-                            </h2>
-                            <p class="h1" data-animate-el>
-                                Certifications that validate my expertise and commitment to continuous learning.
-                            </p>
-            
+    </div> <!-- end column -->
+    </div> <!-- end row testimonials -->
+
+    </section> <!-- end s-works -->
+
+    <!-- ### certificates================================================== -->
+    <section id="certif" class="s-certificates target-section">
+
+        <div class="row certif-portfolio">
+            <div class="column lg-12" data-animate-block>
+
+                <h2 class="text-pretitle" data-animate-el>
+                    Certificates
+                </h2>
+                <p class="h1" data-animate-el>
+                    Certifications that validate my expertise and commitment to continuous learning.
+                </p>
+
                 <div class="row certificates-content" data-animate-el>
                     <!-- Certificate Card 1 -->
                     <div class="column lg-6 tab-12 certificate-card">
                         <div class="certificate-inner">
                             <div class="certificate-front">
                                 <div class="cert-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
                                         <rect x="2" y="3" width="20" height="14" rx="2" ry="2" /> <!-- Browser frame -->
                                         <path d="M3 7h18" /> <!-- Top bar -->
                                         <path d="M7 11l2-2-2-2" /> <!-- Left angle bracket -->
                                         <path d="M13 7l2 2-2 2" /> <!-- Right angle bracket -->
-                                    </svg>                        
+                                    </svg>
                                 </div>
                                 <h3>Web Development</h3>
                                 <p>Certified Internship and Independent Study Batch 6</p>
@@ -496,17 +1046,20 @@
                                     <li>Database Management</li>
                                     <li>API Development</li>
                                 </ul>
-                                <a href="https://drive.google.com/file/d/1z6s6LJL6ff5aHt00cs8BQ66adFv5JhE0/view?usp=sharing" class="btn-verify">Verify Certificate</a>
+                                <a href="https://drive.google.com/file/d/1z6s6LJL6ff5aHt00cs8BQ66adFv5JhE0/view?usp=sharing"
+                                    class="btn-verify">Verify Certificate</a>
                             </div>
                         </div>
                     </div>
-            
+
                     <!-- Certificate Card 2 -->
                     <div class="column lg-6 tab-12 certificate-card">
                         <div class="certificate-inner">
                             <div class="certificate-front">
                                 <div class="cert-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
                                         <!-- Cloud -->
                                         <path d="M17.5 18.5a4.5 4.5 0 0 0-3.5-8 5.5 5.5 0 1 0-8 6.3" />
                                         <!-- Rectangle for server -->
@@ -518,8 +1071,9 @@
                                         <line x1="12" y1="14" x2="12" y2="10" />
                                         <!-- Gear -->
                                         <circle cx="12" cy="7" r="2" />
-                                        <path d="M12 4v1M12 9v1M9.8 5.2l.7.7M14.5 8.5l.7.7M9.8 8.8l.7-.7M14.5 5.5l.7-.7" />
-                                    </svg>                        
+                                        <path
+                                            d="M12 4v1M12 9v1M9.8 5.2l.7.7M14.5 8.5l.7.7M9.8 8.8l.7-.7M14.5 5.5l.7-.7" />
+                                    </svg>
                                 </div>
                                 <h3>IT Development</h3>
                                 <p>Certified Internship and Independent Study Batch 7</p>
@@ -535,20 +1089,22 @@
                                     <li>Database Management</li>
                                     <li>API Development</li>
                                 </ul>
-                                <a href="https://drive.google.com/file/d/1da3rgzxSRPKqhLKjOWZXMjMhS4EuJCTd/view?usp=sharing" class="btn-verify">Verify Certificate</a>
+                                <a href="https://drive.google.com/file/d/1da3rgzxSRPKqhLKjOWZXMjMhS4EuJCTd/view?usp=sharing"
+                                    class="btn-verify">Verify Certificate</a>
                             </div>
                         </div>
                     </div>
-            
+
                     <!-- Certificate Card 3 -->
                     <div class="column lg-6 tab-12 certificate-card">
                         <div class="certificate-inner">
                             <div class="certificate-front">
                                 <div class="cert-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                        <path d="M8 21h8"/>
-                                        <path d="M12 17v4"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                        <path d="M8 21h8" />
+                                        <path d="M12 17v4" />
                                     </svg>
                                 </div>
                                 <h3>IT Development</h3>
@@ -565,341 +1121,366 @@
                                     <li>Database Management</li>
                                     <li>API Development</li>
                                 </ul>
-                                <a href="https://drive.google.com/file/d/1tuUHUijiR8WHqm-5-z0EHnt8m6avYP7s/view?usp=sharing" class="btn-verify">Verify Certificate</a>
+                                <a href="https://drive.google.com/file/d/1tuUHUijiR8WHqm-5-z0EHnt8m6avYP7s/view?usp=sharing"
+                                    class="btn-verify">Verify Certificate</a>
                             </div>
                         </div>
                     </div>
-            
-                            <!-- Certificate Card 4 -->
-                            <div class="column lg-6 tab-12 certificate-card">
-                                <div class="certificate-inner">
-                                    <div class="certificate-front">
-                                        <div class="cert-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <!-- Dokumen -->
-                                                <rect x="2" y="4" width="7" height="16" rx="2" />
-                                                <path d="M4 8h3" />
-                                                <path d="M4 12h3" />
-                                                <path d="M4 16h3" />
-                                                
-                                                <!-- Spreadsheet -->
-                                                <rect x="9" y="4" width="7" height="16" rx="2" />
-                                                <path d="M11 8h3" />
-                                                <path d="M11 12h3" />
-                                                <path d="M11 16h3" />
-                                                <path d="M10 10v6" />
-                                                <path d="M14 10v6" />
-                                                
-                                                <!-- Presentasi -->
-                                                <rect x="16" y="4" width="6" height="16" rx="2" />
-                                                <path d="M18 10h2" />
-                                                <path d="M17 14h4" />
-                                                <path d="M18 18h2" />
-                                            </svg>                                
-                                        </div>
-                                        <h3>Certificate of Competence</h3>
-                                        <p>Microsoft Office Training: Document Techniques</p>
-                                        <span class="issuer">Issued by: Course-Net</span>
-                                        <span class="date">Issued: Nov 2021</span>
-                                        <button class="btn-flip">View Details</button>
-                                    </div>
-                                    <div class="certificate-back">
-                                        <h4>Skills Covered</h4>
-                                        <ul>
-                                            <li>Create neat and correct documents</li>
-                                            <li>Create presentation designs in the form of attractive text, graphics and images</li>
-                                            <li>Create worksheets and process data for further purposes</li>
-                                        </ul>
-                                        <a href="https://drive.google.com/file/d/1bkRTrXe_smd2FBnW-xLdsizHtxMqCXZ_/view?usp=sharing" class="btn-verify">Verify Certificate</a>
-                                    </div>
+
+                    <!-- Certificate Card 4 -->
+                    <div class="column lg-6 tab-12 certificate-card">
+                        <div class="certificate-inner">
+                            <div class="certificate-front">
+                                <div class="cert-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <!-- Dokumen -->
+                                        <rect x="2" y="4" width="7" height="16" rx="2" />
+                                        <path d="M4 8h3" />
+                                        <path d="M4 12h3" />
+                                        <path d="M4 16h3" />
+
+                                        <!-- Spreadsheet -->
+                                        <rect x="9" y="4" width="7" height="16" rx="2" />
+                                        <path d="M11 8h3" />
+                                        <path d="M11 12h3" />
+                                        <path d="M11 16h3" />
+                                        <path d="M10 10v6" />
+                                        <path d="M14 10v6" />
+
+                                        <!-- Presentasi -->
+                                        <rect x="16" y="4" width="6" height="16" rx="2" />
+                                        <path d="M18 10h2" />
+                                        <path d="M17 14h4" />
+                                        <path d="M18 18h2" />
+                                    </svg>
                                 </div>
+                                <h3>Certificate of Competence</h3>
+                                <p>Microsoft Office Training: Document Techniques</p>
+                                <span class="issuer">Issued by: Course-Net</span>
+                                <span class="date">Issued: Nov 2021</span>
+                                <button class="btn-flip">View Details</button>
                             </div>
-            
-                            <!-- Certificate Card 5 -->
-                            <div class="column lg-6 tab-12 certificate-card">
-                                <div class="certificate-inner">
-                                    <div class="certificate-front">
-                                        <div class="cert-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <!-- Folder/Dokumen -->
-                                                <path d="M4 4h6l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
-                                                
-                                                <!-- Kalender -->
-                                                <rect x="3" y="14" width="8" height="6" rx="1" />
-                                                <path d="M5 16h4" />
-                                                <path d="M7 14v2" />
-                                                
-                                                <!-- Ikon Presentasi -->
-                                                <path d="M15 14l4 4" />
-                                                <path d="M19 14l-4 4" />
-                                                <circle cx="17" cy="13" r="1" />
-                                            </svg>                                
-                                        </div>
-                                        <h3>Certificate of Competence</h3>
-                                        <p>Microsoft Office Training for Secretaries</p>
-                                        <span class="issuer">Issued by: PAKAR</span>
-                                        <span class="date">Issued: Okt 2021</span>
-                                        <button class="btn-flip">View Details</button>
-                                    </div>
-                                    <div class="certificate-back">
-                                        <h4>Skills Covered</h4>
-                                        <ul>
-                                            <li>Understanding and Implementing Basic Excel Formulas (Sum, Average, Min, Max, Count)</li>
-                                            <li>Understanding and Implementing Data Processing Functions (If, Vlookup, Hlookup to Pivot Table)</li>
-                                            <li>Understanding and Implementing Basic Ms. Word</li>
-                                        </ul>
-                                        <a href="https://drive.google.com/file/d/1CFsZquwUfbASSB-B7Z_qG7iOY47qPqJ3/view?usp=sharing" class="btn-verify">Verify Certificate</a>
-                                    </div>
+                            <div class="certificate-back">
+                                <h4>Skills Covered</h4>
+                                <ul>
+                                    <li>Create neat and correct documents</li>
+                                    <li>Create presentation designs in the form of attractive text, graphics and images
+                                    </li>
+                                    <li>Create worksheets and process data for further purposes</li>
+                                </ul>
+                                <a href="https://drive.google.com/file/d/1bkRTrXe_smd2FBnW-xLdsizHtxMqCXZ_/view?usp=sharing"
+                                    class="btn-verify">Verify Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Card 5 -->
+                    <div class="column lg-6 tab-12 certificate-card">
+                        <div class="certificate-inner">
+                            <div class="certificate-front">
+                                <div class="cert-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <!-- Folder/Dokumen -->
+                                        <path
+                                            d="M4 4h6l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+
+                                        <!-- Kalender -->
+                                        <rect x="3" y="14" width="8" height="6" rx="1" />
+                                        <path d="M5 16h4" />
+                                        <path d="M7 14v2" />
+
+                                        <!-- Ikon Presentasi -->
+                                        <path d="M15 14l4 4" />
+                                        <path d="M19 14l-4 4" />
+                                        <circle cx="17" cy="13" r="1" />
+                                    </svg>
                                 </div>
+                                <h3>Certificate of Competence</h3>
+                                <p>Microsoft Office Training for Secretaries</p>
+                                <span class="issuer">Issued by: PAKAR</span>
+                                <span class="date">Issued: Okt 2021</span>
+                                <button class="btn-flip">View Details</button>
                             </div>
-            
-                             <!-- Certificate Card 6 -->
-                             <div class="column lg-6 tab-12 certificate-card">
-                                <div class="certificate-inner">
-                                    <div class="certificate-front">
-                                        <div class="cert-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <!-- Sertifikat -->
-                                                <rect x="3" y="3" width="18" height="14" rx="2" ry="2" />
-                                                
-                                                <!-- Penghargaan -->
-                                                <circle cx="12" cy="10" r="2" stroke="currentColor" fill="none" />
-                                                <path d="M12 8v4" />
-                                                <path d="M10 10h4" />
-                                                
-                                                <!-- Lencana atau Tanda Pencapaian -->
-                                                <path d="M7 15l2 2h8l2-2" />
-                                                <path d="M9 17v4h6v-4" />
-                                            </svg>                                
-                                        </div>
-                                        <h3>Certificate of Achievement</h3>
-                                        <p>ITS - Python</p>
-                                        <span class="issuer">Issued by: Multimatics</span>
-                                        <span class="date">Issued: July 2024</span>
-                                        <button class="btn-flip">View Details</button>
-                                    </div>
-                                    <div class="certificate-back">
-                                        <h4>Skills Covered</h4>
-                                        <ul>
-                                            <li>Master the basics of Python, including data structures and control logic.</li>
-                                            <li>Apply Python for automation and data analysis.</li>
-                                            <li>Use libraries such as Pandas and NumPy for work efficiency.</li>
-                                        </ul>
-                                        <a href="https://drive.google.com/file/d/1s4uLJIv2J1AKcoLWcRhZAjUtnE3hR3f3/view?usp=sharing" class="btn-verify">Verify Certificate</a>
-                                    </div>
+                            <div class="certificate-back">
+                                <h4>Skills Covered</h4>
+                                <ul>
+                                    <li>Understanding and Implementing Basic Excel Formulas (Sum, Average, Min, Max,
+                                        Count)</li>
+                                    <li>Understanding and Implementing Data Processing Functions (If, Vlookup, Hlookup
+                                        to Pivot Table)</li>
+                                    <li>Understanding and Implementing Basic Ms. Word</li>
+                                </ul>
+                                <a href="https://drive.google.com/file/d/1CFsZquwUfbASSB-B7Z_qG7iOY47qPqJ3/view?usp=sharing"
+                                    class="btn-verify">Verify Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Card 6 -->
+                    <div class="column lg-6 tab-12 certificate-card">
+                        <div class="certificate-inner">
+                            <div class="certificate-front">
+                                <div class="cert-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <!-- Sertifikat -->
+                                        <rect x="3" y="3" width="18" height="14" rx="2" ry="2" />
+
+                                        <!-- Penghargaan -->
+                                        <circle cx="12" cy="10" r="2" stroke="currentColor" fill="none" />
+                                        <path d="M12 8v4" />
+                                        <path d="M10 10h4" />
+
+                                        <!-- Lencana atau Tanda Pencapaian -->
+                                        <path d="M7 15l2 2h8l2-2" />
+                                        <path d="M9 17v4h6v-4" />
+                                    </svg>
                                 </div>
+                                <h3>Certificate of Achievement</h3>
+                                <p>ITS - Python</p>
+                                <span class="issuer">Issued by: Multimatics</span>
+                                <span class="date">Issued: July 2024</span>
+                                <button class="btn-flip">View Details</button>
                             </div>
-                            
+                            <div class="certificate-back">
+                                <h4>Skills Covered</h4>
+                                <ul>
+                                    <li>Master the basics of Python, including data structures and control logic.</li>
+                                    <li>Apply Python for automation and data analysis.</li>
+                                    <li>Use libraries such as Pandas and NumPy for work efficiency.</li>
+                                </ul>
+                                <a href="https://drive.google.com/file/d/1s4uLJIv2J1AKcoLWcRhZAjUtnE3hR3f3/view?usp=sharing"
+                                    class="btn-verify">Verify Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Add more certificate cards as needed -->
                 </div>
-            </section>
-            
-            <style>
-            /* CSS untuk Sertifikat */
-            .s-certificates {
-                padding: 6rem 0;
-                background-color: var(--color-body);
-            }
-            
+    </section>
+
+    <style>
+        /* CSS untuk Sertifikat */
+        .s-certificates {
+            padding: 6rem 0;
+            background-color: var(--color-body);
+        }
+
+        .certificates-content {
+            margin-top: 4rem;
+            display: flex;
+            flex-wrap: wrap;
+            /* Agar elemen bisa turun jika ruang tidak cukup */
+            gap: 3rem;
+            /* Memberikan jarak antar elemen */
+        }
+
+        .certificate-card {
+            margin-bottom: 3rem;
+            perspective: 1000px;
+            flex: 1 1 calc(50% - 3rem);
+            /* Default 2 kolom dengan gap */
+            max-width: calc(50% - 3rem);
+            /* Membatasi lebar untuk 2 kolom */
+        }
+
+        .certificate-inner {
+            position: relative;
+            width: 100%;
+            height: 340px;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .certificate-card:hover .certificate-inner {
+            transform: rotateY(180deg);
+        }
+
+        .certificate-front,
+        .certificate-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 1.2rem;
+            padding: 2.4rem;
+        }
+
+
+        .certificate-front {
+            background: linear-gradient(145deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .certificate-back {
+            background: linear-gradient(145deg, var(--color-gray-1), var(--color-gray-2));
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cert-icon {
+            margin-bottom: 1.5rem;
+            color: var(--color-1);
+        }
+
+        .certificate-front h3 {
+            margin-bottom: 1rem;
+            color: var(--color-white);
+            font-size: 2.4rem;
+        }
+
+        .certificate-front p {
+            color: var(--color-1);
+            margin-bottom: 1.5rem;
+        }
+
+        .certificate-front .issuer,
+        .certificate-front .date {
+            display: block;
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .certificate-back h4 {
+            color: var(--color-white);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .certificate-back ul {
+            margin-bottom: 2rem;
+        }
+
+        .certificate-back ul li {
+            color: var(--color-gray-6);
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .certificate-back ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--color-1);
+        }
+
+        .btn-verify {
+            display: inline-block;
+            padding: 1.2rem 2.4rem;
+            background-color: var(--color-1);
+            color: var(--color-white);
+            text-decoration: none;
+            border-radius: 0.6rem;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-verify:hover {
+            background-color: var(--color-2);
+        }
+
+        /* Responsiveness untuk Mobile */
+        @media screen and (max-width: 800px) {
             .certificates-content {
-                margin-top: 4rem;
-                display: flex;
-                flex-wrap: wrap; /* Agar elemen bisa turun jika ruang tidak cukup */
-                gap: 3rem; /* Memberikan jarak antar elemen */
+                gap: 4rem;
+                /* Jarak antar elemen lebih kecil */
             }
-            
+
             .certificate-card {
-                margin-bottom: 3rem;
-                perspective: 1000px;
-                flex: 1 1 calc(50% - 3rem); /* Default 2 kolom dengan gap */
-                max-width: calc(50% - 3rem); /* Membatasi lebar untuk 2 kolom */
+                flex: 1 1 100%;
+                /* Full width untuk mode ponsel */
+                max-width: 100%;
+                margin-bottom: 4rem;
+                /* Memberikan jarak antar elemen */
             }
-            
+
             .certificate-inner {
-                position: relative;
-                width: 100%;
-                height: 340px;
-                transition: transform 0.8s;
-                transform-style: preserve-3d;
-                cursor: pointer;
+                height: 350px;
+                /* Menyesuaikan tinggi elemen di ponsel */
             }
-            
-            .certificate-card:hover .certificate-inner {
-                transform: rotateY(180deg);
-            }
-            
-            .certificate-front, .certificate-back {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-                border-radius: 1.2rem;
-                padding: 2.4rem;
-            }
-            
-            
-            .certificate-front {
-                background: linear-gradient(145deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            
-            .certificate-back {
-                background: linear-gradient(145deg, var(--color-gray-1), var(--color-gray-2));
-                transform: rotateY(180deg);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            
-            .cert-icon {
-                margin-bottom: 1.5rem;
-                color: var(--color-1);
-            }
-            
-            .certificate-front h3 {
-                margin-bottom: 1rem;
-                color: var(--color-white);
-                font-size: 2.4rem;
-            }
-            
-            .certificate-front p {
-                color: var(--color-1);
-                margin-bottom: 1.5rem;
-            }
-            
-            .certificate-front .issuer,
-            .certificate-front .date {
-                display: block;
-                font-size: 1.4rem;
-                color: white;
-                margin-bottom: 0.5rem;
-            }
-            
-            .certificate-back h4 {
-                color: var(--color-white);
-                margin-bottom: 2rem;
-                text-align: center;
-            }
-            
-            .certificate-back ul {
-                margin-bottom: 2rem;
-            }
-            
-            .certificate-back ul li {
-                color: var(--color-gray-6);
-                margin-bottom: 1rem;
-                padding-left: 2rem;
-                position: relative;
-            }
-            
-            .certificate-back ul li:before {
-                content: "→";
-                position: absolute;
-                left: 0;
-                color: var(--color-1);
-            }
-            
-            .btn-verify {
-                display: inline-block;
-                padding: 1.2rem 2.4rem;
-                background-color: var(--color-1);
-                color: var(--color-white);
-                text-decoration: none;
-                border-radius: 0.6rem;
-                text-align: center;
-                transition: background-color 0.3s ease;
-            }
-            
-            .btn-verify:hover {
-                background-color: var(--color-2);
-            }
-            
-            /* Responsiveness untuk Mobile */
-            @media screen and (max-width: 800px) {
-                .certificates-content {
-                    gap: 4rem; /* Jarak antar elemen lebih kecil */
-                }
-            
-                .certificate-card {
-                    flex: 1 1 100%; /* Full width untuk mode ponsel */
-                    max-width: 100%;
-                    margin-bottom: 4rem; /* Memberikan jarak antar elemen */
-                }
-            
-                .certificate-inner {
-                    height: 350px; /* Menyesuaikan tinggi elemen di ponsel */
-                }
-            }
-            
-            </style>
+        }
+    </style>
 
 
-            <!-- ### contact
+    <!-- ### contact
             ================================================== -->
-            <section id="contact" class="s-contact target-section">
+    <section id="contact" class="s-contact target-section">
 
-                <div class="row contact-top">
-                    <div class="column lg-12">
-                        <h2 class="text-pretitle">
-                            Get In Touch
-                        </h2>
+        <div class="row contact-top">
+            <div class="column lg-12">
+                <h2 class="text-pretitle">
+                    Get In Touch
+                </h2>
 
-                        <p class="h1">
-                            I’d be delighted to hear from you!
-                            Whether you have inquiries or simply 
-                            want to discuss design, technology, or art — feel 
-                            free to drop me a message.
-                        </p>
-                    </div>
-                </div> <!-- end contact-top -->
+                <p class="h1">
+                    I’d be delighted to hear from you!
+                    Whether you have inquiries or simply
+                    want to discuss design, technology, or art — feel
+                    free to drop me a message.
+                </p>
+            </div>
+        </div> <!-- end contact-top -->
 
-                <div class="row contact-bottom">
-                    <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
-                        <h3 class="text-pretitle">Reach me at</h3>
-                        <p class="contact-links">
-                            <a href="mailto:mhdfahri2003@gmail.com" class="mailtoui">mhdfahri2003@gmail.com</a> <br>
-                        </p>
-                    </div>
-                    <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
-                        <h3 class="text-pretitle">Social</h3>
-                        <ul class="contact-social">
-                        <li><a href="https://medium.com/@mhdfahri2003">Medium</a></li>
-                        <li><a href="https://www.tiktok.com/@predookyut?_t=ZS-8t390CRlzWS&_r=1">Tiktok</a></li>
-                        <li><a href="https://www.linkedin.com/in/muhammad-fahri-740269229/">Linkedin</a></li>
-                        <li><a href="https://www.instagram.com/muhdfhri/">Instagram</a></li>
-                        </ul>
-                    </div>
-                    <div class="column lg-4 md-12 contact-block">
-                        <a href="mailto:mhdfahri2003@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
-                    </div>
-                </div> <!-- end contact-bottom -->
+        <div class="row contact-bottom">
+            <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
+                <h3 class="text-pretitle">Reach me at</h3>
+                <p class="contact-links">
+                    <a href="mailto:mhdfahri2003@gmail.com" class="mailtoui">mhdfahri2003@gmail.com</a> <br>
+                </p>
+            </div>
+            <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
+                <h3 class="text-pretitle">Social</h3>
+                <ul class="contact-social">
+                    <li><a href="https://medium.com/@mhdfahri2003">Medium</a></li>
+                    <li><a href="https://www.tiktok.com/@predookyut?_t=ZS-8t390CRlzWS&_r=1">Tiktok</a></li>
+                    <li><a href="https://www.linkedin.com/in/muhammad-fahri-740269229/">Linkedin</a></li>
+                    <li><a href="https://www.instagram.com/muhdfhri/">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="column lg-4 md-12 contact-block">
+                <a href="mailto:mhdfahri2003@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say
+                    Hello.</a>
+            </div>
+        </div> <!-- end contact-bottom -->
 
-            </section> <!-- end contact -->
+    </section> <!-- end contact -->
 
-        </main> <!-- end s-content -->
+    </main> <!-- end s-content -->
 
 
-        <!-- ## footer
+    <!-- ## footer
         ================================================== -->
-        <footer class="s-footer">
+    <footer class="s-footer">
 
-            <div class="row">
-                <div class="column ss-copyright">
-                    <span>© Copyright Fahri 2025</span> 
-                    <span>Design by Muhammad Fahri <span>
-                </div>
-
-                <div class="ss-go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
-                    </a>
-                </div>
+        <div class="row">
+            <div class="column ss-copyright">
+                <span>© Copyright 2025</span>
             </div>
 
-        </footer> <!-- end s-footer -->
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
+                        <path
+                            d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </footer> <!-- end s-footer -->
 
     </div> <!-- end -s-pagewrap -->
 
@@ -910,4 +1491,5 @@
     <script src="js/main.js"></script>
 
 </body>
+
 </html>

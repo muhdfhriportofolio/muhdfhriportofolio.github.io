@@ -1,132 +1,50 @@
 ==================================================================================================
 
-DESCRIPTION:
+DESKRIPSI:
 
-Fahri is a modern, stylish, free personal website template designed for creative individuals 
-and professionals. It is the perfect template if you wish to build an online presence and create 
-a strong first impression on all your site visitors. Fahri will help you craft a personal 
-professional website wherein you can showcase your works, talents, and present yourself on the 
-web in the best possible light. On top of that, the template is versatile and easy to customize 
-so with some modifications and a bit of creativity you even use it as a portfolio site for 
-digital studios or a landing page for your projects.
+Fahri adalah website pribadi yang saya kembangkan untuk mendukung profesionalitas. Dengan desain modern dan tampilan yang elegan, situs ini menjadi wadah bagi saya untuk menampilkan karya, keahlian, serta memperkenalkan diri secara optimal di dunia digital. Selain itu, Fahri dirancang agar fleksibel dan mudah disesuaikan, sehingga dapat berkembang seiring dengan perjalanan karier dan kreativitas saya.
 
-==================================================================================================
+-------------------------------------------------------------------------------------------------------
 
+Lisensi:
 
-LICENSE:
+Sumber daya gratis ini disediakan oleh styleshout.com dan dapat digunakan untuk proyek pribadi maupun komersial.
 
-This free resource is provided by styleshout.com and is free to use in 
-both personal and commercial projects.
+Hak Penggunaan:
 
+Anda diperbolehkan menggunakan template ini untuk proyek pribadi maupun komersial, baik untuk diri sendiri maupun klien.
+Template ini dapat dimodifikasi sesuai kebutuhan, asalkan tetap mencantumkan kredit dan tautan atribusi ke styleshout.com.
+Larangan:
 
-Rights:
--------
+Tidak diperkenankan menjual kembali atau mendistribusikan ulang (baik gratis maupun berbayar) template ini tanpa izin.
+Jika ingin membagikan ulang atau mempromosikan template ini, harap mengarahkan pengguna ke halaman sumber asli di styleshout.com, bukan langsung ke file unduhan.
+Atribusi:
 
-You are permitted to use this free resource in any number of personal and commercial projects for 
-yourself or a client. You may modify the resource according to your requirements and include them 
-in your projects under the following condition - you MUST give appropriate credit, provide an 
-attribution link to styleshout.com.
-
-
-Prohibitions:
--------------
-
-You are not permitted to resell or redistribute(even for free) the resource "as is" without 
-prior consent. If you would like to republish or promote this resource on your site, please 
-link back to the appropriate resource page on styleshout.com where users can find the download 
-and not directly to the download zip file.
-
-
-Attribution: 
-------------
-
-You must include a credit link to our website(https://www.styleshout.com) somewhere on your site. 
-We prefer the footer credit that comes with the template but you are still free to move it 
-somewhere else.
-
-
-
-If you have any questions about the License, feel free to contact us.
-
-
------------------------------------------------------------------------------------------------------
-
-
-REMOVING THE ATTRIBUTION LINK:
-
-We understand that there are situations where you want to use our templates without 
-the crediting obligation. If that's your case, you can always send us a 
-credit removal fee of 10 USD through Paypal. This will allow you to use a single 
-template attribution/credit link free on ONE DOMAIN name.
-
-You can send your payments through Paypal to this address: ealigam@gmail.com or
-visit our attribution removal page: https://www.styleshout.com/attribution-free/ 
-and click the pay button on the page.
-
-If possible, kindly send us the site's url where the template is being used. 
-Also, keep your Paypal receipt as proof of payment and your good to go.
-
-
------------------------------------------------------------------------------------------------------- 
-
-
-SUPPORT:
-    
-Since Fahri is distributed for free, support is not offered. FAHRI is coded according 
-to current web standards and we did our best to make the template easy to use and modify.
-If you have minimum web development experience, you can easily modify the template. 
-However, If you're still new to HTML and CSS, I suggest that you visit the 
-following tutorials:
-
- - https://marksheet.io/
- - http://learn.shayhowe.com/html-css/
-
-These will teach you the essentials of HTML and CSS. In addition, if you want to include
-javascript in your skill-set, you can also check out these tutorials: 
-
- - https://www.codecademy.com/learn/introduction-to-javascript
- - https://javascript.info/
-
-
-
------------------------------------------------------------------------------------------------------- 
-
-
-GET THE LATEST VERSION:
-
-We update our templates on a regular basis so to make sure that you have the latest version, 
-always download the template files directly on our website(https://www.styleshout.com/)
-
-
+Kredit ke styleshout.com wajib dicantumkan di situs Anda.
+Sebaiknya tetap mempertahankan kredit di footer, tetapi Anda bebas memindahkannya ke bagian lain.
 
 -------------------------------------------------------------------------------------------------------
 
 
-SOURCES AND CREDITS:
+Sumber dan Kredit:
 
-I've used the following resources as listed.
+Font:
 
-Fonts:
- - Public Sans Font (https://fonts.google.com/specimen/Public+Sans)
- - DM Serif Display (https://fonts.google.com/specimen/DM+Serif+Display)
+Public Sans
+DM Serif Display
+Ikon:
 
-Icons:
- - Iconmonstr (https://iconmonstr.com/)
+Iconmonstr
+Foto dan Grafis:
 
-Stock Photos and Graphics:
- - Unsplash.com (https://unsplash.com/)
- 
-Javascript Files:
- - Anime.js (https://animejs.com/)
- - Swiper (https://swiperjs.com/)
- - MoveTo.js (https://github.com/hsnaydd/moveTo)
- - Prism.js (https://prismjs.com/)
- - Basic Lightbox (https://basiclightbox.electerious.com/)
- - MailtoUI (https://mailtoui.com/)
+Unsplash
+JavaScript:
 
--------------------------------------------------------------------------------------------------------
+Anime.js
+Swiper
+MoveTo.js
+Prism.js
+Basic Lightbox
+MailtoUI
 
-
-Thanks for downloading from Styleshout :)
-
-
+Terimakasih☺
